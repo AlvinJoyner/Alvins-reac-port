@@ -1,0 +1,217 @@
+/* Global styles */
+:root {
+  --primary-color: #020d0e; 
+}
+
+/* Define font family, text-align, background gradient, max-width, margin, and min-height for body */
+body {
+  font-family: Work Sans, Arial, sans-serif;
+  text-align: center;
+  background-color: #031817;
+  max-width: 1980px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* Header styles */
+.navbar,
+.navbar-brand {
+  display: block;
+  width:   %;
+  background-color: var(--primary-color);
+}
+
+/* Create the shining animation for the header */
+@keyframes shine {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 2;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+/* Apply the shining effect to the header elements */
+.navbar,
+.navbar-brand {
+  animation: shine 1.5s infinite; /* Make the animation infinite */
+}
+
+.navigation {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+/* Add space between navbar items */
+.navbar-item {
+  display: inline-flex;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(2, 2, 96);
+  justify-content: center;
+  margin: 30px 0px 30px 0px;
+}
+
+/* Style for the buttons */
+.nav-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5em 1em; /* Add padding to make the buttons more clickable */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add transition effect on hover */
+  justify-content: space-between;
+  margin: 0.8em;
+  border: 0.2em solid darkblue; /* Add border to the buttons */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Add box shadow to create the glow effect */
+}
+
+.nav-button:hover {
+  background-color: #5cb3ff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Increase the shadow on hover for stronger glow */
+}
+
+/* Main content styles */
+main {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%; /* Set the maximum width to 1980px */
+  background-color: #e6f3ff;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+/* Add styles for card images */
+.figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0; /* Add border radius to the top corners */
+}
+
+/* Add glow on hover for the cards */
+.card {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Add box shadow to create the glow effect */
+  transition: box-shadow 0.3s ease; /* Add transition to smoothly animate the glow */
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Increase the shadow on hover for stronger glow */
+}
+
+/* About section styles */
+.my-own-picture {
+  clip-path: circle();
+  width: 250px;
+}
+
+.label {
+  text-align: left;
+}
+
+/* Footer styles */
+footer.footer {
+  background-color: var(--footer-color);
+  justify-content: center;
+  height: 60px;
+}
+
+/* Contact section styles */
+#reach-out {
+  padding: 2em;
+  background-color: #e6f3ff;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:darkblue;
+}
+
+h2 {
+
+  font-size: 40px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-form {
+  width: 60%;
+  margin: auto;
+}
+
+.contact-form .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form input,
+.contact-form .form textarea {
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #c2e7ff;
+}
+
+.contact-form .form button {
+  padding: 0.5em;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error-text {
+  color: red;
+}
+
+/* Portfolio section styles */
+.columns {
+  margin: 2em;
+  padding: 1em;
+}
+
+/* Resume section styles */
+.resume .columns {
+  margin: 2em;
+  padding: 1em;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 1980px) {
+  main {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px; 
+  }
+
+  .columns {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  /* Update styles for smaller screens */
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 60%;
+  }
+}
